@@ -7,12 +7,9 @@
 #include <PubSubClient.h>
 //#include <Wire.h>
 
-#define CHANNELS 1
 // Replace the next variables with your SSID/Password combination
-//const char* ssid = "SSID";
-const char* ssid = "BBT";
-//const char* password = "PASSWORD";
-const char* password = "@@TheBigBangTheory@@";
+const char* ssid = "SSID";
+const char* password = "PASSWORD";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
