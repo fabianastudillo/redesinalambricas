@@ -3,8 +3,15 @@ version: "3"
 services:
   mosquitto:
     image: eclipse-mosquitto
+    container_name: mosquitto
     volumes:
-      - ./:/mosquitto/:rw
+#      - ./:/mosquitto/:rw
+      - ./config:/mosquitto/config
+      - ./data:/mosquitto/data
+      - ./log:/mosquitto/log
     ports:
       - 1883:1883
       - 9001:9001
+    network_mode: "host"
+#    environment:
+#      ALLOW_UNSECURED_MODE: 'true'
